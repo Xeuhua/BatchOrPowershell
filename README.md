@@ -28,3 +28,9 @@ _(get_Content "filename.properties")[raw] | % {$_.Split("=")}_
 OR
 
 _get_Content "filename.properties" -totalcount raw | % {$_.Split("=")}_
+
+转化为string
+
+_$a.GetType()_
+
+_get_Content "filename.properties" -totalcount raw | % {$_.Split("=")} | Out-String_ 
