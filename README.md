@@ -17,8 +17,14 @@ _Test=C:\Jenkins-INT\test_
 
 _get_Content "filename.properties"_
 
+去掉等号
+
 _get_Content "filename.properties" | % {$_.Split("=")}_
 
+取特定行
+
 _(get_Content "filename.properties")[raw] | % {$_.Split("=")}_
+
+OR
 
 _get_Content "filename.properties" -totalcount raw | % {$_.Split("=")}_
