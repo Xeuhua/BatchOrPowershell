@@ -1,5 +1,5 @@
 # Use this page to summarize the different configuration relevent methode.
-* Powershell 创建环境变量 
+## Powershell 创建环境变量 
 
 只是机器环境变量的副本，及时改变，下次重新打开时会恢复
 
@@ -9,7 +9,11 @@ _ls env:_
 
 .NET方法[environment]::SetEnvironmentvariable操作可以立刻生效。
 
-* Powershell 读取 .properties 
+_[Environment]::SetEnvironmentVariable("TestVariableName", "My Value", "option")_
+  
+The "option" parameter allows you to tell PowerShell the type of environment variable should be created. You can assign the new environment variable to the User level (per Windows user profile), Machine level (for anyone logging onto the computer), or Process level (another way to create a temporary variable like above, using the $env operation).
+
+## Powershell 读取 .properties 
 
 _config.properties_
 
