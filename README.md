@@ -1,7 +1,7 @@
 # Use this page to summarize the different configuration relevent methode.
 ## Powershell 创建环境变量 
 
-* 在Powershell中只是机器环境变量的副本，只影响当前会话。类似于基于windows环境中的set命令。
+* Set Environment Variable For The Current Session 在Powershell中只是机器环境变量的副本，只影响当前会话。类似于基于windows环境中的set命令。
 
 _$env:<变量名> = " <新值> "_
 
