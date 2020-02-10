@@ -15,8 +15,6 @@ _$env:Path = $env:path + ";c:\temp"_
 
 _set-item -path env:path -value ($env:path + ";c:\temp")_
 
-_set-item -force -path "env:$info[0]" -value $info[1]_
-
 * .NET方法[environment]::SetEnvironmentvariable操作可以立刻生效。
 
 _[Environment]::SetEnvironmentVariable("TestVariableName", "My Value", "option")_
@@ -28,12 +26,6 @@ The "option" parameter allows you to tell PowerShell the type of environment var
 For a full breakdown on working with environment variables in PowerShell, check out the help section by running _Get-Help -Name about_Environment_Variables_.
 
 ## Powershell 读取 .properties 
-
-_config.properties_
-
-_MA_TOOL=C:\Jenkins-INT\tool_
-
-_Test=C:\Jenkins-INT\test_
 
 前提：找到相同路径
 
