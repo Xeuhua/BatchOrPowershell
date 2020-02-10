@@ -49,4 +49,4 @@ _$value = $infos[1].Trim()_
 
 OR
 
-_($name, $value)=(get-Content "env.properties" -totalcount 1) -split '='_
+_($name, $value)=(get-Content "filename.properties" -totalcount 1) -split '='_
