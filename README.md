@@ -1,11 +1,19 @@
 # Use this page to summarize the different configuration relevent methode.
 ## Powershell 创建环境变量 
 
-* 只是机器环境变量的副本，及时改变，下次重新打开时会恢复
+* 在Powershell中只是机器环境变量的副本，只影响当前会话。类似于基于windows环境中的set命令。
 
-_$env:TestVar = " value "_
+_$env:<变量名> = " <新值> "_
 
 _ls env:_
+
+例如，将";c:\temp"追加到 Path 环境变量中:
+
+_$env:Path = $env:path + ";c:\temp"_
+
+或使用 Set-Item, Remove-Item 和 Copy-Item 来更改环境变量
+
+_set-item -path env:path -value ($env:path + ";c:\temp")_
 
 * .NET方法[environment]::SetEnvironmentvariable操作可以立刻生效。
 
