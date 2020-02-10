@@ -5,22 +5,29 @@
 
 >在Powershell中只是机器环境变量的副本，只影响当前会话。类似于基于windows环境中的set命令。
 
-_$env:<变量名> = " <新值> "_
+```powershell
+$env:<变量名> = " <新值> "
 
-_ls env:_
-
+ls env:
+```
 >例如，将";c:\temp"追加到 Path 环境变量中:
 
-_$env:Path = $env:path + ";c:\temp"_
+```powershell
+$env:Path = $env:path + ";c:\temp"
+```
 
 >或使用 Set-Item, Remove-Item 和 Copy-Item 来更改环境变量
 
-_set-item -path env:path -value ($env:path + ";c:\temp")_
+```powershell
+set-item -path env:path -value ($env:path + ";c:\temp")
+```
 
 * .NET方法[environment]::SetEnvironmentvariable操作可以立刻生效。
 
-_[Environment]::SetEnvironmentVariable("TestVariableName", "My Value", "option")_
-  
+```powershell
+[Environment]::SetEnvironmentVariable("TestVariableName", "My Value", "option")
+```
+
 The "option" parameter allows you to tell PowerShell the type of environment variable should be created. You can assign the new environment variable to the User level (per Windows user profile), Machine level (for anyone logging onto the computer), or Process level (another way to create a temporary variable like above, using the $env operation).
 
 * Getting Help
@@ -31,34 +38,48 @@ For a full breakdown on working with environment variables in PowerShell, check 
 
 >前提：找到相同路径
 
-_get-Content "filename.properties"_
+```powershell
+get-Content "filename.properties"
+```
 
 >去掉等号
 
-_get-Content "filename.properties" | % {$__.Split("=")}_
+```powershell
+get-Content "filename.properties" | % {$_.Split("=")}
+```
 
 >取特定行
 
-_(get-Content "filename.properties")[raw] | % {$__.Split("=")}_
+```powershell
+(get-Content "filename.properties")[raw] | % {$_.Split("=")}
+```
 
 OR
 
-_get-Content "filename.properties" -totalcount raw | % {$__.Split("=")}_
+```powershell
+get-Content "filename.properties" -totalcount raw | % {$_.Split("=")}
+```
 
 >转化为string
 
-_$a.GetType()_
+```powershell
+$a.GetType()
 
-_get-Content "filename.properties" -totalcount raw | % {$__.Split("=")} | Out-String_ 
+get-Content "filename.properties" -totalcount raw | % {$_.Split("=")} | Out-String 
+```
 
 >分类
 
-_get-Content "filename.properties" -totalcount raw | % {$infos = $__.Split("=")}_
+```powershell
+get-Content "filename.properties" -totalcount raw | % {$infos = $_.Split("=")}
 
-_$key = $infos[0].Trim()_
+$key = $infos[0].Trim()
 
-_$value = $infos[1].Trim()_
+$value = $infos[1].Trim()
+```
 
 OR
 
-_($name, $value)=(get-Content "filename.properties" -totalcount 1) -split '='_
+```powershell
+($name, $value)=(get-Content "filename.properties" -totalcount 1) -split '='
+```
