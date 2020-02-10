@@ -1,4 +1,4 @@
-Use this page to summarize the different configuration relevent methode.
+# Use this page to summarize the different configuration relevent methode.
 * Powershell 创建环境变量 
 
 只是机器环境变量的副本，及时改变，下次重新打开时会恢复
