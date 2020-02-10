@@ -33,25 +33,25 @@ _get-Content "filename.properties"_
 
 去掉等号
 
-_get-Content "filename.properties" | % {$_.Split("=")}_
+_get-Content "filename.properties" | % {$__.Split("=")}_
 
 取特定行
 
-_(get-Content "filename.properties")[raw] | % {$_.Split("=")}_
+_(get-Content "filename.properties")[raw] | % {$__.Split("=")}_
 
 OR
 
-_get-Content "filename.properties" -totalcount raw | % {$_.Split("=")}_
+_get-Content "filename.properties" -totalcount raw | % {$__.Split("=")}_
 
 转化为string
 
 _$a.GetType()_
 
-_get-Content "filename.properties" -totalcount raw | % {$_.Split("=")} | Out-String_ 
+_get-Content "filename.properties" -totalcount raw | % {$__.Split("=")} | Out-String_ 
 
 分类
 
-_get-Content "filename.properties" -totalcount raw | % {$infos = $_.Split("=")}_
+_get-Content "filename.properties" -totalcount raw | % {$infos = $__.Split("=")}_
 
 _$key = $infos[0].Trim()_
 
