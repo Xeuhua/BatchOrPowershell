@@ -19,29 +19,29 @@ _Test=C:\Jenkins-INT\test_
 
 前提：找到相同路径
 
-_get_Content "filename.properties"_
+_get-Content "filename.properties"_
 
 去掉等号
 
-_get_Content "filename.properties" | % {$_.Split("=")}_
+_get-Content "filename.properties" | % {$_.Split("=")}_
 
 取特定行
 
-_(get_Content "filename.properties")[raw] | % {$_.Split("=")}_
+_(get-Content "filename.properties")[raw] | % {$_.Split("=")}_
 
 OR
 
-_get_Content "filename.properties" -totalcount raw | % {$_.Split("=")}_
+_get-Content "filename.properties" -totalcount raw | % {$_.Split("=")}_
 
 转化为string
 
 _$a.GetType()_
 
-_get_Content "filename.properties" -totalcount raw | % {$_.Split("=")} | Out-String_ 
+_get-Content "filename.properties" -totalcount raw | % {$_.Split("=")} | Out-String_ 
 
 分类
 
-_get_Content "filename.properties" -totalcount raw | % {$infos = $_.Split("=")}_
+_get-Content "filename.properties" -totalcount raw | % {$infos = $_.Split("=")}_
 
 _$key = $infos[0].Trim()_
 
