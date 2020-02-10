@@ -15,6 +15,8 @@ _$env:Path = $env:path + ";c:\temp"_
 
 _set-item -path env:path -value ($env:path + ";c:\temp")_
 
+_set-item -force -path "env:$info[0]" -value $info[1]_
+
 * .NET方法[environment]::SetEnvironmentvariable操作可以立刻生效。
 
 _[Environment]::SetEnvironmentVariable("TestVariableName", "My Value", "option")_
