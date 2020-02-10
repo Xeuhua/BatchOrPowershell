@@ -84,3 +84,9 @@ OR
 ($name, $value)=(get-Content "filename.properties" -totalcount 1) -split '='
 ```
 ### Java JVM set system property
+* change the location of user home
+That can be set as a Java -D argument
+```JVM
+rem JVM parameters, modify as appropriate
+set JAVA_OPTS=-Xms128m -Xmx1024m -Duser.home=<path>
+```
