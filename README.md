@@ -83,6 +83,12 @@ OR
 ```powershell
 ($name, $value)=(get-Content "filename.properties" -totalcount 1) -split '='
 ```
+
+### Powershell run cmd .bat file
+```cmd
+start-process "cmd.exe" "<path>:xxx.bat"
+```
+
 ### Java JVM set system property
 * change the location of user home
 That can be set as a Java -D argument
