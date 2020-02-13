@@ -1,4 +1,4 @@
-# Use this package to summarize the different configuration relevent methode.
+# Summarize the different configuration relevent methode.
 ### Powershell 创建环境变量 
 
 * Set Environment Variable For The Current Session 
