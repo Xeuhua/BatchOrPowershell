@@ -84,6 +84,9 @@ OR
 ($name, $value)=(get-Content "filename.properties" -totalcount 1) -split '='
 ```
 
+### powershell to manage group policy
+<https://gerane.github.io/powershell/Local-gpo-powershell/>
+
 ### Powershell run cmd .bat file
 ```cmd
 start-process "cmd.exe" "<path>:xxx.bat"
