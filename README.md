@@ -30,7 +30,8 @@ The value of PowerShell vs. Bash comes down to the user. If you're working on se
 
 While Bash is great to manage text files in a scripting environment, everything is managed through APIs, not files. So, Bash is useful primarily to import Linux code to Windows machines and develop that code.
 
+![compare](it_ops-ps_vs_bash_desktop.jpg)
 
 ### Reference
-<https://www.educba.com/powershell-vs-bash/>
-https://searchitoperations.techtarget.com/tip/On-Windows-PowerShell-vs-Bash-comparison-gets-interesting
+1. <https://www.educba.com/powershell-vs-bash/>
+2. <https://searchitoperations.techtarget.com/tip/On-Windows-PowerShell-vs-Bash-comparison-gets-interesting>
